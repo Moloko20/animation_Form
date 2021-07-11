@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form class="form__body load" action="#" method="POST">
+        <h2>Info</h2>
+        <label for="email">
+          <p class="description">Enter your email address</p>
+          <input
+            placeholder="team@checkforpatent.com"
+            type="email"
+            name="email"
+            id="email"
+          />
+        </label>
+        <h2 class="marg">Product 1</h2>
+        <label for="product_1">
+          <p class="description">Enter main keyword for the product</p>
+          <input
+            placeholder="for example, sylicon wine cup"
+            type="text"
+            name="product_1"
+            id="product_1"
+          />
+        </label>
+        <label for="product_1__link">
+          <p class="description d_link">
+            Enter link to the similar product as a reference
+          </p>
+          <input
+            placeholder="https://..."
+            type="url"
+            name="product_1__link"
+            id="product_1__link"
+          />
+        </label>
+        <button type="button" class="add marg">
+          <p class="add__btn">Add more products</p>
+          <img src="img/btn_add.png" alt="add_button" />
+        </button>
+        <p class="description discount">
+          We offer discount up to 36% for multiple checks
+        </p>
+        <input
+          type="button"
+          value="Submit and Pay 24.99 USD"
+          class="pay greenBtn"
+        />
+        <div class="secure">
+          <img src="img/secure_icon.png" alt="lock" />
+          <p>Secure payment with Stripe</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form form1">
+      <form class="form__body" action="#" method="POST">
+        <h2>Adding more products</h2>
+        <p class="description">
+          The more items you check, the better the price.
+        </p>
+        <div class="offers">
+          <div class="products _active">
+            <label for="products5">
+              <input
+                type="radio"
+                name="products"
+                id="products5"
+                value="5"
+                checked
+              />
+              <div class="radio"></div>
+              <div class="par">
+                <p class="price">5 products for 80 usd / 16$ for each</p>
+                <p class="safe">You safe 36% on each patent check</p>
+              </div>
+            </label>
+          </div>
+          <div class="products">
+            <label for="products4">
+              <input type="radio" name="products" id="products4" value="4" />
+              <div class="radio"></div>
+              <div class="par">
+                <p class="price">4 products for 72 usd / 18$ for each</p>
+                <p class="safe">You safe 28% on each patent check</p>
+              </div>
+            </label>
+          </div>
+          <div class="products">
+            <label for="products3">
+              <input type="radio" name="products" id="products3" value="3" />
+              <div class="radio"></div>
+              <div class="par">
+                <p class="price">3 products for 60 usd / 20$ for each</p>
+                <p class="safe">You safe 20% on each patent check</p>
+              </div>
+            </label>
+          </div>
+          <div class="products">
+            <label for="products2">
+              <input type="radio" name="products" id="products2" value="2" />
+              <div class="radio"></div>
+              <div class="par">
+                <p class="price">2 products for 44 usd / 22$ for each</p>
+                <p class="safe">You safe 12% on each patent check</p>
+              </div>
+            </label>
+          </div>
+          <div class="products">
+            <label for="products1">
+              <input type="radio" name="products" id="products1" value="1" />
+              <div class="radio"></div>
+              <div class="par">
+                <p class="price">1 product for 24.99 usd</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <button class="next greenBtn" type="button">Continue</button>
+      </form>
+    </div>
+
+    <div class="form form2">
+      <form class="form__body load" action="#" method="POST">
+        <div class="wrapper">
+          <h2>Info</h2>
+          <label for="email">
+            <p class="description">Enter your email address</p>
+            <input
+              placeholder="team@checkforpatent.com"
+              type="email"
+              name="email"
+              id="email"
+            />
+          </label>
+
+          <div class="container">
+            <div class="product">
+              <h2 class="marg">Product 1</h2>
+
+              <label for="products1">
+                <p class="description">Enter main keyword for the product</p>
+                <input
+                  placeholder="for example, sylicon wine cup"
+                  type="text"
+                  name="products1"
+                  id="products1"
+                />
+              </label>
+              <label for="products1__link">
+                <p class="description d_link">
+                  Enter link to the similar product as a reference
+                </p>
+                <input
+                  placeholder="https://..."
+                  type="url"
+                  name="products1__link"
+                  id="products1__link"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <input
+          class="pay greenBtn"
+          type="button"
+          value="Submit and Pay 24.99 USD"
+          id="pay"
+        />
+      </form>
+    </div>
+
+    <div class="form form3">
+      <form class="form__body" action="#" method="POST">
+        <div class="wrapper">
+          <h2>Successfull payment</h2>
+          <p class="description">
+            Your request has been accepted and will be processed within 24
+            working hours. We will send you a payment details and all
+            information to your email.
+          </p>
+        </div>
+        <img src="img/paySuccess_icon.png" alt="paySuccess_icon" />
+        <button type="button" class="back greenBtn">Back</button>
+      </form>
+    </div>
+
+    <div class="form form4">
+      <form class="form__body" action="#" method="POST">
+        <div class="wrapper">
+          <h2>Successfull payment</h2>
+          <p class="description">
+            Sorry, but we’ve having trouble processing your payment. You have
+            been not charged for this transaction.
+          </p>
+        </div>
+        <img src="img/payNotSuccess_icon.png" alt="paySuccess_icon" />
+        <button type="button" class="back greenBtn redBtn">
+          Try to pay again
+        </button>
+      </form>
+    </div>
+
+    <div class="image">
+      <img src="img/bg_dots.png" alt="dots" />
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

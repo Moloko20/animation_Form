@@ -1,0 +1,360 @@
+@import 'normalize.scss';
+* {
+  box-sizing: border-box;
+}
+button,
+button:active,
+button:focus,
+input,
+input:active,
+input:focus {
+  outline: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/gilroy-medium.ttf);
+}
+
+body {
+  overflow: hidden;
+  background: #f4f5fa;
+  font-family: Gilroy;
+}
+
+.form {
+  position: absolute;
+  width: 440px;
+  height: 535px;
+  left: 56.5%;
+  top: 16.6%;
+  z-index: 1;
+
+  background: #fff;
+  box-shadow: 10px 10px 60px #e2e7ff;
+  border-radius: 0px 50px 50px 50px;
+
+  .form__body {
+    margin: 35px;
+
+    h2 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 134.9%;
+      color: #1c154e;
+      margin: 0;
+    }
+    .marg {
+      margin-top: 25px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 145%;
+      color: #1c154e;
+      opacity: 0.8;
+      margin: 12px 0;
+    }
+    .description.d_link {
+      margin-top: 15px;
+    }
+    .description.discount {
+      margin-bottom: 19px;
+      color: #494471;
+    }
+    input:not([type='button']) {
+      width: 100%;
+      padding-bottom: 7px;
+      border: none;
+      border-bottom: 1.5px solid #e1e3ee;
+    }
+    input::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 19px;
+      color: #d0d3e2;
+    }
+    input:-moz-placeholder {
+      font-size: 16px;
+      line-height: 19px;
+      color: #d0d3e2;
+    }
+    .add {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+
+      &__btn {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 122%;
+        color: #23c967;
+        margin-right: 6px;
+      }
+      img {
+        margin-top: 1px;
+      }
+    }
+    .add::after {
+      position: absolute;
+      left: 35px;
+      bottom: 150px;
+      display: block;
+      content: '';
+      height: 2px;
+      width: 0%;
+
+      background-color: #23c967;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .add:hover::after,
+    .add:focus::after {
+      width: 40%;
+    }
+
+    .secure {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 55px;
+      p {
+        font-size: 14px;
+        line-height: 17px;
+        color: #afb4cc;
+      }
+    }
+  }
+}
+
+.greenBtn {
+  background-color: #23c967;
+  border-radius: 15px;
+  border: none;
+
+  width: 84.1%;
+  padding: 11px 77px;
+  position: absolute;
+  bottom: 55px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 122%;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.greenBtn:hover {
+  transform: scale(1.05);
+}
+.redBtn {
+  background-color: #ea717f;
+}
+
+.form1 {
+  left: 150%;
+
+  opacity: 0;
+  visibility: hidden;
+  .offers {
+    .products {
+      border: 1.5px solid #dddfed;
+      border-top: none;
+      label {
+        width: 370px;
+        height: 60px;
+        padding: 11px 17px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        input {
+          width: auto;
+        }
+        input[type='radio'] {
+          display: none;
+        }
+        position: relative;
+      }
+      .radio::before {
+        content: '';
+        width: 22px;
+        height: 22px;
+        left: 17px;
+        top: 19px;
+
+        position: absolute;
+        border: 1.5px solid #e1e3ee;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+      .radio::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 24px;
+        left: 22.1px;
+
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+      }
+      /* Checked */
+      input[type='radio']:checked ~ .radio::after {
+        background: #23c967;
+      }
+    }
+    .products._active {
+      background-color: #f4f5fa;
+    }
+    .products:last-child {
+      border-bottom: none;
+      border-radius: 0 0 25px 25px;
+      border: 1.5px solid #dddfed;
+      border-top: none;
+    }
+    .products:first-child {
+      border-radius: 25px 25px 0 0;
+      border: 1.5px solid #dddfed;
+    }
+    .par {
+      margin-left: 34px;
+      .price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 111%;
+        color: #000000;
+      }
+      .safe {
+        margin-top: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 115%;
+        color: #23c967;
+      }
+    }
+  }
+}
+.form2 {
+  left: 150%;
+
+  opacity: 0;
+  visibility: hidden;
+  .wrapper {
+    height: 380px;
+    overflow: auto;
+    .num {
+      display: flex;
+      margin-top: 25px;
+      .marg {
+        margin-top: 0px;
+      }
+      .close {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.image {
+  position: absolute;
+  width: 102.54px;
+  height: 118px;
+  left: 84.3%;
+  top: 14.8%;
+  z-index: 0;
+}
+
+//стилизация скроллбара
+
+.wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+.wrapper::-webkit-scrollbar-track {
+  background-color: #e1e3ee;
+  border-radius: 5px;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #23c967;
+  border-radius: 5px;
+}
+
+img[alt='loader'] {
+  width: 32px;
+  position: absolute;
+  left: 200px;
+  bottom: 62px;
+
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form3 {
+  left: 150%;
+
+  opacity: 0;
+  visibility: hidden;
+  img {
+    display: flex;
+    justify-content: center;
+    margin: 34px auto;
+  }
+}
+
+.form4 {
+  left: 150%;
+
+  opacity: 0;
+  visibility: hidden;
+  img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: -8px;
+  }
+}
+
+._prevForm {
+  transition: all 1s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  left: -50%;
+}
+._conveyor {
+  left: 150%;
+}
+
+._nextForm {
+  transition: all 1s ease 0s;
+  opacity: 1;
+  visibility: visible;
+  left: 56.5%;
+}
+
+._deleted {
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  height: 0%;
+  transform: translate(-100px, 0);
+}
