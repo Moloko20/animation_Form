@@ -1,3 +1,3 @@
 # animation form
 
-A form for ordering and adding products with animation. My favorite project in JavaScript.
+A form for ordering and adding products with animation.
